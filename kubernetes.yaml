@@ -90,7 +90,7 @@ spec:
           timeoutSeconds: 7
         volumeMounts:
         - name: cassandra-data
-          mountPath: /cassandra_data
+          mountPath: /opt/cassandra/data
   volumeClaimTemplates:
   - metadata:
       name: cassandra-data
