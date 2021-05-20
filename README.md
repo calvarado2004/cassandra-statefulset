@@ -47,3 +47,24 @@ cqlsh:example_db> exit
 
 ```
 
+Also you can upload some mock data to this table.
+
+```
+kubectl exec -it pod/cassandra-0 -n cassandra -- cqlsh < cyclists.cql
+Unable to use a TTY - input is not a terminal or the right kind of file
+
+$ kubectl exec -it pod/cassandra-0 -n cassandra -- cqlsh
+cqlsh> SELECT * FROM example_db.cyclist_name;
+
+ id                                   | firstname  | lastname
+--------------------------------------+------------+-----------------
+ dcbcb52e-a650-429b-b315-ecee5b4871b6 |       Adan |        Willmott
+ d570fc54-2fba-413c-9502-58d20032e69d |    Electra |     Stockbridge
+ 055de49b-cb76-41e4-b4be-9a875cffdba2 |     Cletus |          Atchly
+ d71d9c94-4e05-4084-a940-552577f8b9ca |       Alli |           Hedge
+ 050f1069-49e1-47b9-a5f3-06d122d1413e |       Poul |         Bromige
+ 1235bf0e-1ba2-49bc-a365-6e54da2f82ba |      Price |         Kinchin
+ 846abb8d-4a5b-491c-9694-21e5fddabb4a |       Shep |           Blyde
+ 95596356-81f9-4840-8748-c71ebad6a0e1 |   Alphonso |          Kassel
+ 18f12929-5eae-4c9c-829b-b2e56a1f8294 |      Dorri |            Duer
+```
