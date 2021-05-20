@@ -50,7 +50,7 @@ cqlsh:example_db> exit
 Also you can upload some mock data to this table.
 
 ```
-kubectl exec -it pod/cassandra-0 -n cassandra -- cqlsh < cyclists.cql
+$ kubectl exec -it pod/cassandra-0 -n cassandra -- cqlsh < cyclists.cql
 Unable to use a TTY - input is not a terminal or the right kind of file
 
 $ kubectl exec -it pod/cassandra-0 -n cassandra -- cqlsh
