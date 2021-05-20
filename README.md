@@ -32,7 +32,7 @@ cqlsh> describe keyspaces
 system_schema  system      system_traces
 system_auth    example_db  system_distributed
 cqlsh> USE example_db;
-cqlsh:example_db> CREATE TABLE example_db.cyclist_name (id UUID PRIMARY KEY, lastname text, firstname text );
+cqlsh:example_db> CREATE TABLE example_db.cyclist_name (id text PRIMARY KEY, lastname text, firstname text );
 cqlsh:example_db> INSERT INTO cyclist_name (id, lastname, firstname) VALUES (c4b65263-fe58-4846-83e8-f0e1c13d518f,'Alvarado','Carlos');
 cqlsh:example_db> INSERT INTO cyclist_name (id, lastname, firstname) VALUES (c4b65263-fe58-4846-83e8-f0e1c13d518d,'Contreras','Laura');
 cqlsh:example_db> SELECT * FROM cyclist_name;
