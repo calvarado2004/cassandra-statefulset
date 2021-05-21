@@ -68,3 +68,10 @@ cqlsh> SELECT * FROM example_db.cyclist_name;
  95596356-81f9-4840-8748-c71ebad6a0e1 |   Alphonso |          Kassel
  18f12929-5eae-4c9c-829b-b2e56a1f8294 |      Dorri |            Duer
 ```
+
+Save your data into disk:
+
+```
+$ kubectl exec -it pod/cassandra-0 -n cassandra -- /opt/cassandra/bin/nodetool flush
+
+```
